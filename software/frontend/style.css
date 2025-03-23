@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -288,7 +289,6 @@ header {
 }
 
 .quote-details li::before {
-    content: ; /* Checkmark icon before list items */
     position: absolute;
     left: 0; /* Positioning the icon */
     color: #00adb5; /* Color for the icon */
@@ -359,183 +359,53 @@ header {
 }
 
 .menu-container {
-    position: relative; /* Position relative for absolute positioning of dropdown */
+    position: relative; 
 }
 
 .menu-button {
-    background-color: transparent; /* Transparent background */
-    border: none; /* No border */
-    color: #00adb5; /* Color of the dots */
-    font-size: 30px; /* Size of the dots */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    position: relative; /* Position relative for dropdown */
+    background-color: transparent; 
+    border: none; 
+    color: #00adb5; 
+    font-size: 30px; 
+    cursor: pointer; 
+    transition: transform 0.3s, color 0.3s;
+    position: relative; 
 }
 
 .menu-button:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
-    color: #ffd369; /* Change color on hover */
+    transform: scale(1.2); 
+    color: #ffd369; 
 }
 
 .menu-button:focus {
-    outline: none; /* Remove outline on focus */
+    outline: none; 
 }
 
 .dropdown-content {
-    display: none; /* Initially hidden */
-    position: absolute; /* Positioning for dropdown */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background */
-    min-width: 160px; /* Minimum width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    z-index: 1; /* Ensure it appears above other elements */
-    border-radius: 5px; /* Rounded corners */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    display: none; 
+    position: absolute; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    min-width: 160px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+    border-radius: 5px; 
+    transition: opacity 0.3s ease; 
 }
 
 .menu-container:hover .dropdown-content {
-    display: block; /* Show dropdown on hover */
+    display: block; 
 }
 
 .dropdown-content a {
-    color: #333; /* Dark text color */
-    padding: 12px 16px; /* Padding for links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Make links block elements */
-    transition: background 0.3s; /* Smooth background transition */
+    color: #333; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+    transition: background 0.3s; 
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(0, 173, 181, 0.2); /* Change background on hover */
-    color: #00adb5; /* Change text color on hover */
-}
-/* Feedback Modal Styles */
-#feedback-modal {
-    background: rgba(0, 0, 0, 0.8); /* Dark background for the modal */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    background-color: rgba(0, 173, 181, 0.2); 
+    color: #00adb5; 
 }
 
-#feedback-options {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-#write-feedback-container, #read-feedback-container {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-}
-
-#write-feedback-container:hover, #read-feedback-container:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
-}
-
-
-#feedback-name, #feedback-description {
-    width: 100%; /* Full width */
-    padding: 12px; /* Padding for input fields */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    background: rgba(255, 255, 255, 0.9); /* Change to a less transparent background */
-    color: #000000; /* Change text color to black for better visibility */
-    margin-bottom: 15px; /* Space below input fields */
-    transition: background 0.3s; /* Smooth background transition */
-}
-
-#feedback-name:focus, #feedback-description:focus {
-    background: rgba(255, 255, 255, 0.3); /* Change background on focus */
-    outline: none; /* Remove outline */
-}
-
-#save-feedback-button {
-    padding: 12px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #00adb5; /* Button color */
-    color: #ffffff; /* Text color */
-    cursor: pointer; /* Pointer cursor */
-    transition: background 0.3s, transform 0.2s; /* Smooth transition */
-}
-
-#save-feedback-button:hover {
-    background: #ffd369; /* Change color on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-#feedback-list {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    max-height: 300px; /* Max height for scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-#feedback-list p {
-    margin: 10px 0; /* Space between feedback items */
-    color: #ffd369; /* Feedback text color */
-    font-size: 1.1em; /* Font size for feedback */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider between feedback items */
-    padding-bottom: 10px; /* Space below feedback items */
-}
-
-#feedback-list p:last-child {
-    border-bottom: none; /* Remove border for the last item */
-}
-#feedback-options {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    width: 100%; /* Full width for the options */
-}
-
-#write-feedback-button, #read-feedback-button {
-    padding: 12px 20px; /* Padding for buttons */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #00adb5; /* Button color */
-    color: #ffffff; /* Text color */
-    cursor: pointer; /* Pointer cursor */
-    transition: background 0.3s, transform 0.2s; /* Smooth transition */
-    font-size: 1em; /* Font size */
-    flex: 1; /* Allow buttons to grow equally */
-    margin: 0 10px; /* Space between buttons */
-}
-
-#write-feedback-button:hover, #read-feedback-button:hover {
-    background: #ffd369; /* Change color on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-#write-feedback-button:focus, #read-feedback-button:focus {
-    outline: none; /* Remove outline on focus */
-    box-shadow: 0 0 5px rgba(255, 211, 105, 0.5); /* Add shadow on focus */
-}
-#feedback-list {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Solid background for better contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    max-height: 300px; /* Max height for scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-.feedback-item {
-    color:#00adb5; /* Set feedback text color to black */
-    background: #f9f9f9; /* Light background for better contrast */
-    margin: 10px 0;
-    font-size: 1.2em; /* Increased font size */
-    font-weight: bold; /* Bold text for emphasis */
-    border-radius: 5px; /* Rounded corners for feedback items */
-    padding: 15px; /* Increased padding for feedback items */
-    border: 2px solid #00adb5; /* Distinct border for separation */
-    transition: background 0.3s; /* Smooth background transition */
-}
-
-.feedback-item:hover {
-    background: #e0e0e0; /* Change background on hover for interactivity */
-}
