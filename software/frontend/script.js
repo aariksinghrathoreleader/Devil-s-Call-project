@@ -72,12 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('saved-history-modal').style.display = 'block';
     });
 
-    document.getElementById('feedback').addEventListener('click', (event) => {
-        event.preventDefault();
-        document.getElementById('feedback-modal').style.display = 'block';
-    });
-
-    // Close feedback modal functionality
+    // Close modal functionality
     document.querySelectorAll('.close-button').forEach(button => {
         button.addEventListener('click', () => {
             const modal = button.closest('.modal');
@@ -89,58 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close modal when clicking outside of it
     window.addEventListener('click', (event) => {
-        const feedbackModal = document.getElementById('feedback-modal');
         const savedHistoryModal = document.getElementById('saved-history-modal');
-        if (event.target === feedbackModal) {
-            feedbackModal.style.display = 'none';
-        }
         if (event.target === savedHistoryModal) {
             savedHistoryModal.style.display = 'none';
         }
     });
-
-    // Write feedback functionality
-    document.getElementById('write-feedback-button').addEventListener('click', () => {
-        document.getElementById('write-feedback-container').style.display = 'block';
-        document.getElementById('read-feedback-container').style.display = 'none';
-    });
-
-    // Read feedback functionality
-    document.getElementById('read-feedback-button').addEventListener('click', () => {
-        document.getElementById('write-feedback-container').style.display = 'none';
-        document.getElementById('read-feedback-container').style.display = 'block';
-    });
-
-    // Save feedback functionality with typing effect
-    document.getElementById('save-feedback-button').addEventListener('click', () => {
-        const name = document.getElementById('feedback-name').value;
-        const description = document.getElementById('feedback-description').value;
-
-        if (name && description) {
-            const feedbackList = document.getElementById('feedback-list');
-            const feedbackItem = document.createElement('div');
-            feedbackItem.className = 'feedback-item';
-
-            // Start typing effect
-            typeFeedback(feedbackItem, `<strong>${name}:</strong> ${description}`);
-            feedbackList.appendChild(feedbackItem);
-
-            // Clear the input fields
-            document.getElementById('feedback-name').value = '';
-            document.getElementById('feedback-description').value = '';
-        } else {
-            alert('Please fill in both fields.');
-        }
-    });
-
-    // Function to simulate typing effect
-    function typeFeedback(element, text, index = 0) {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(() => typeFeedback(element, text, index), 100); // Adjust typing speed here
-        }
-    }
 
     // Function to toggle quote details
     function toggleQuoteDetails(quoteDetails) {
